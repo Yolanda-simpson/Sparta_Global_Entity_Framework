@@ -1,0 +1,2 @@
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week9\day3\Sparta_Global_Entity_Framework\ASPDOTNETENTITYFrameworkHWK\ASPDOTNETENTITYFrameworkHWK\bin\System.Web.Mvc.dll
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week9\day3\Sparta_Global_Entity_Framework\ASPDOTNETENTITYFrameworkHWK\ASPDOTNETENTITYFrameworkHWK\bin\System.Web.WebPages.Razor.dll
