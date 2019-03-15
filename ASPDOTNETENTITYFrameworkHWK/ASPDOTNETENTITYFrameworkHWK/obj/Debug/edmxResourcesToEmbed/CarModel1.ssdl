@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CarName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CarColour" Type="nvarchar" MaxLength="50" />
+    <Property Name="CarSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="CarEngineSize" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Age" Type="int" />
+    <Property Name="PhoneNumber" Type="nchar" MaxLength="15" />
+    <Property Name="Emailaddress" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ManfucatorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ManufacurerLocation" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MiniBus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MiniBusMake" Type="nvarchar" MaxLength="50" />
+    <Property Name="Colour" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfSeats" Type="int" />
+    <Property Name="EngineSize" Type="int" />
+  </EntityType>
+  <EntityType Name="RentedCar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RentedCarName" Type="nvarchar" MaxLength="50" />
+    <Property Name="HireDate" Type="datetime" />
+    <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="RentedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Van">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VanMake" Type="nvarchar" MaxLength="50" />
+    <Property Name="VanSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfSeats" Type="int" />
+    <Property Name="VanColour" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CarsModelStoreContainer">
+    <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacturer" EntityType="Self.Manufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MiniBus" EntityType="Self.MiniBus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RentedCar" EntityType="Self.RentedCar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Van" EntityType="Self.Van" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

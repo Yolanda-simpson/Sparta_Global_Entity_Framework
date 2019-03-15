@@ -51,6 +51,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -131,54 +132,90 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Car.cs">
+      <DependentUpon>CarModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarModel1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarModel1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarModel1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CarsController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManufacturersController.cs" />
+    <Compile Include="Controllers\MiniBusController.cs" />
+    <Compile Include="Controllers\RentedCarsController.cs" />
+    <Compile Include="Controllers\VansController.cs" />
+    <Compile Include="Customer.cs">
+      <DependentUpon>CarModel1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CarModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CarModel.Context.tt</DependentUpon>
+    <Compile Include="Manufacturer.cs">
+      <DependentUpon>CarModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CarModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CarModel.tt</DependentUpon>
+    <Compile Include="MiniBu.cs">
+      <DependentUpon>CarModel1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CarModel.Designer.cs">
+    <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CarModel.edmx</DependentUpon>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentedCar.cs">
+      <DependentUpon>CarModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Van.cs">
+      <DependentUpon>CarModel1.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CarModel1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarModel1.edmx</DependentUpon>
+      <LastGenOutput>CarModel1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CarModel1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CarModel1.edmx</DependentUpon>
+      <LastGenOutput>CarModel1.cs</LastGenOutput>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\motorway.png" />
+    <Content Include="Content\Styles.css" />
+    <Content Include="Content\tunnel.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\CarModel.Context.tt">
+    <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CarModel.edmx</DependentUpon>
-      <LastGenOutput>CarModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\CarModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CarModel.edmx</DependentUpon>
-      <LastGenOutput>CarModel.cs</LastGenOutput>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\CarModel.edmx">
+    <EntityDeploy Include="CarModel1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CarModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>CarModel1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\CarModel.edmx.diagram">
-      <DependentUpon>CarModel.edmx</DependentUpon>
+    <Content Include="CarModel1.edmx.diagram">
+      <DependentUpon>CarModel1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -191,7 +228,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -205,9 +244,42 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Cars\Create.cshtml" />
+    <Content Include="Views\Cars\Delete.cshtml" />
+    <Content Include="Views\Cars\Details.cshtml" />
+    <Content Include="Views\Cars\Edit.cshtml" />
+    <Content Include="Views\Cars\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Manufacturers\Create.cshtml" />
+    <Content Include="Views\Manufacturers\Delete.cshtml" />
+    <Content Include="Views\Manufacturers\Details.cshtml" />
+    <Content Include="Views\Manufacturers\Edit.cshtml" />
+    <Content Include="Views\Manufacturers\Index.cshtml" />
+    <Content Include="Views\MiniBus\Create.cshtml" />
+    <Content Include="Views\MiniBus\Delete.cshtml" />
+    <Content Include="Views\MiniBus\Details.cshtml" />
+    <Content Include="Views\MiniBus\Edit.cshtml" />
+    <Content Include="Views\MiniBus\Index.cshtml" />
+    <Content Include="Views\RentedCars\Create.cshtml" />
+    <Content Include="Views\RentedCars\Delete.cshtml" />
+    <Content Include="Views\RentedCars\Details.cshtml" />
+    <Content Include="Views\RentedCars\Edit.cshtml" />
+    <Content Include="Views\RentedCars\Index.cshtml" />
+    <Content Include="Views\Vans\Create.cshtml" />
+    <Content Include="Views\Vans\Delete.cshtml" />
+    <Content Include="Views\Vans\Details.cshtml" />
+    <Content Include="Views\Vans\Edit.cshtml" />
+    <Content Include="Views\Vans\Index.cshtml" />
+    <Content Include="Views\Cars\Search.cshtml" />
+    <Content Include="Views\MiniBus\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

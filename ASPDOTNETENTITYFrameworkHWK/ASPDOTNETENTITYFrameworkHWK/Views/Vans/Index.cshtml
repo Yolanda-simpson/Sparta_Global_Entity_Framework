@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ASPDOTNETENTITYFrameworkHWK.Van>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VanMake)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VanSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfSeats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VanColour)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VanMake)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VanSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfSeats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VanColour)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

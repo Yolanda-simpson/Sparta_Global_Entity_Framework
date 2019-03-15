@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/styles")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -21,8 +22,13 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Browse Cars", "Index", "Cars")</li>
+                    <li>@Html.ActionLink("Browse Vans", "Index", "Vans")</li>
+                    <li>@Html.ActionLink("Browse Mini Buses", "Index", "MiniBus")</li>
+                    <li>@Html.ActionLink("Rented Cars", "Index", "RentedCars")</li>
+                    <li>@Html.ActionLink("Manufacurers", "Index", "Manufacturers")</li>
+                    <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                    <li>@Html.ActionLink("Search for a car", "Search", "Cars")</li>
                 </ul>
             </div>
         </div>

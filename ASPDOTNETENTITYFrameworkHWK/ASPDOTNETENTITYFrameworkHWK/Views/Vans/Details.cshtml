@@ -1,0 +1,50 @@
+﻿@model ASPDOTNETENTITYFrameworkHWK.Van
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Van</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VanMake)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VanMake)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VanSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VanSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfSeats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfSeats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VanColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VanColour)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

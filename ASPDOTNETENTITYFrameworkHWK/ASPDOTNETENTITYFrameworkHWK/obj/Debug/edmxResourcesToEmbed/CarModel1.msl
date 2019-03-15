@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarsModelStoreContainer" CdmEntityContainer="CarsEntities10">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="CarsModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CarName" ColumnName="CarName" />
+          <ScalarProperty Name="CarColour" ColumnName="CarColour" />
+          <ScalarProperty Name="CarSize" ColumnName="CarSize" />
+          <ScalarProperty Name="CarEngineSize" ColumnName="CarEngineSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CarsModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Emailaddress" ColumnName="Emailaddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="CarsModel.Manufacturer">
+        <MappingFragment StoreEntitySet="Manufacturer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ManfucatorName" ColumnName="ManfucatorName" />
+          <ScalarProperty Name="ManufacurerLocation" ColumnName="ManufacurerLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiniBus">
+      <EntityTypeMapping TypeName="CarsModel.MiniBu">
+        <MappingFragment StoreEntitySet="MiniBus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MiniBusMake" ColumnName="MiniBusMake" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="NumberOfSeats" ColumnName="NumberOfSeats" />
+          <ScalarProperty Name="EngineSize" ColumnName="EngineSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RentedCars">
+      <EntityTypeMapping TypeName="CarsModel.RentedCar">
+        <MappingFragment StoreEntitySet="RentedCar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RentedCarName" ColumnName="RentedCarName" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="RentedBy" ColumnName="RentedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vans">
+      <EntityTypeMapping TypeName="CarsModel.Van">
+        <MappingFragment StoreEntitySet="Van">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VanMake" ColumnName="VanMake" />
+          <ScalarProperty Name="VanSize" ColumnName="VanSize" />
+          <ScalarProperty Name="NumberOfSeats" ColumnName="NumberOfSeats" />
+          <ScalarProperty Name="VanColour" ColumnName="VanColour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
